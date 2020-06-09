@@ -48,11 +48,11 @@
     5. execute_flip(): execute the flip in different situatoions
 
     6. check_who_wins(): check who wins according to the number of tiles
-        if self.is_empty() is True:
-            if occupy["black"] > occupy["white"], black wins
-            elif --------------- == --------------, Tie
-            else, white wins
-            return the result
+        if self.is_empty() is True:   
+            if occupy["black"] > occupy["white"], black wins   
+            elif --------------- == --------------, Tie   
+            else, white wins   
+            return the result   
     
     7. display(): call p1.display() and p2.display()
 
