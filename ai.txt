@@ -1,0 +1,27 @@
+I did some improvement to my AI player: I made it prefer edge
+locations than certer locations. The AIplayer plays as I want.
+The relevent code is in player.py, at the end of check_next_step() method,
+The algorithm is : find all valid locations,
+                    if the location is at the edge,
+                    combine the location(tuple(x, y)) and the number of tiles it can flip into a new tuple(location, can_flip)
+                    then append the tuple to edge_list
+
+                    elif the location is not at edge,
+                    combine the location(tuple(x, y)) and the number of tiles it can flip into a new tuple(location, can_flip)
+                    then append the tuple to not_edge_list
+
+                    sort the two lists according to can_flip
+
+                    if the first(with largest can_flip number) tuple in edge_list has a can_flip much larger than that in not_edge_list has,
+                    (here I set the threshold to be 5), the edge location will be chosen as next check_next_step
+                    else the not_edge location will be chosen
+                    (if any one of the two lists is empty, the fisrt tuple in the other list will be chosen)
+I will consider the AI player smart because I know the trick of playing the game but
+the rate that the it beat me is about 60 persent.
+As for future improvement, I'm thinking about applying Alpha Zero, a very mature deep learning way to build AI player
+I also tried to implement it to my project, it took me two days to figure it out but I failed, it is too difficult!
+Code can also be found on https://github.com/suragnair/alpha-zero-general
+I understand that it trains by self-playing and I cloned the trained model on my computer, imported pytorch and ran the author's game, it worked,
+However, it was too complicated to combine his model with my project because we designed the game structure in totally different ways
+
+But still, I believe Alpha Zero would be the best way to design an AI player.
