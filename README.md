@@ -1,3 +1,5 @@
+# Othello
+You need to install Processing to play.
 #### Data Structure:       
     * I use tuple to represent the position(x_cordinate, y_cordinate)
     * I use dictionary to represnet the board, which stores the positions, the keys are : "black","white","empty", the values are lists of positions
